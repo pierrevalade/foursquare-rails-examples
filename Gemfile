@@ -35,4 +35,4 @@ gem "haml"
 gem "json"
 gem "typhoeus"
 
-gem "quimby"
+gem "quimby", :require => 'foursquare'
