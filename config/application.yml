@@ -1,0 +1,12 @@
+defaults: &defaults
+  app_id: EJFXLWLZVKG3BU541MRTQG0KGJ2AXNYRQYMMD1UZF2MSH1N5
+  app_secret: D1ZM1SX4NXSKAZ5R5NF10JZRFJPLMJJBEMDRPMVD5FFDCO3I
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
