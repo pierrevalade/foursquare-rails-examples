@@ -1,0 +1,44 @@
+= sitemap "#{@venue.name}"
+
+= see_more "https://developer.foursquare.com/docs/explore.html#req=venues/#{@venue_id}"
+
+%table
+  %tr
+    %td Name
+    %td= @venue.name
+  %tr
+    %td Location
+    %td= @venue.location.address
+  - if @venue.primary_category
+    %tr
+      %td Primary Category
+      %td= @venue.primary_category.name
+  %tr
+    %td Categories
+    %td
+      - @venue.categories.each do |category|
+        %ul
+          %li
+            = image_tag category["icon"]
+            = category["name"]
+  %tr
+    %td Checkins Count
+    %td= @venue.stats["checkinsCount"]
+    
+  %tr
+    %td Photos
+    %td
+      %p
+        = @venue.photos_count
+        photos
+        - unless @venue.photos.blank?
+          <br />
+          All photos may not be present here, use "all_photos" method to get more photos
+          <br />
+          Note that various size are available for each photo (original, 300x300, 100x100, 36x36)
+      - @venue.photos.each do |photo|
+        = link_to image_tag(photo.square_100_url), photo.url
+    
+  %tr
+    %td More
+    %td= link_to "See documentation", "https://developer.foursquare.com/docs/explore.html#req=venues/#{@venue_id}"

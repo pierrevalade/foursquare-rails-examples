@@ -1,0 +1,21 @@
+= sitemap("#{current_user.name} Profile")
+
+= see_more "https://developer.foursquare.com/docs/explore.html#req=users/self"
+
+%table
+  %tr
+    %td First Name
+    %td= current_user.first_name
+  %tr
+    %td Last Name
+    %td= current_user.last_name 
+  %tr
+    %td Photo
+    %td= image_tag current_user.photo
+  %tr
+    %td Email
+    %td= current_user.email
+    
+  %tr
+    %td More
+    %td= link_to "See documentation", "https://developer.foursquare.com/docs/explore.html#req=users/self"

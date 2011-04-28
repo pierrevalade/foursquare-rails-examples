@@ -1,0 +1,14 @@
+= sitemap "#{current_user.name}'s Recent Checkins"
+
+= see_more("https://developer.foursquare.com/docs/explore.html#req=users/self/checkins")
+
+- current_user.checkins.each do |checkin|
+  .checkin
+    .venue
+      .icon
+        = image_tag(checkin.venue.icon) if checkin.venue
+      .content
+        .name= "@ #{checkin.venue.name}" if checkin.venue
+        .shout= checkin.shout
+        .time= time_ago_in_words(checkin.created_at)
+      /= checkin.inspect
