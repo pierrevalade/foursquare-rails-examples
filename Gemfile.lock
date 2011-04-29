@@ -42,9 +42,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     polyglot (0.3.1)
-    quimby (0.4.0)
-      json
-      typhoeus
     rack (1.2.2)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
@@ -82,7 +79,6 @@ PLATFORMS
 DEPENDENCIES
   haml
   json
-  quimby
   rails (= 3.0.3)
   settingslogic
   sqlite3-ruby
