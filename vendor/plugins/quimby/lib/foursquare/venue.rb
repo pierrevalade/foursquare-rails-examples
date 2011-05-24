@@ -57,6 +57,12 @@ module Foursquare
       primary_category ? primary_category["icon"] : "https://foursquare.com/img/categories/none.png"
     end
     
+    # returns the venue short url
+    # https://developer.foursquare.com/docs/venues/venues.html
+    def short_url
+      @json["shortUrl"]
+    end
+
     def photos_count
       @json["photos"]["count"]
     end
