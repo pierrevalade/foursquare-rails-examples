@@ -13,6 +13,9 @@ class ExamplesController < ApplicationController
   def checkins
   end
   
+  def friends
+  end
+  
   def venues_search
     if params[:name]
       # venues is a hash, with keys that represents different type of results

@@ -1,0 +1,12 @@
+= sitemap "#{current_user.name}'s friends"
+
+= see_more("https://developer.foursquare.com/docs/explore.html#req=users/self/friends")
+
+- current_user.friends.each do |friend|
+  .friend
+    .photo
+      = image_tag(friend.photo) if friend.photo
+    .info
+      .name= "#{friend.first_name} #{friend.last_name}"
+      .city= friend.home_city
+      /= friend.inspect
