@@ -10,6 +10,7 @@ FoursquareSpeed::Application.routes.draw do
     collection do
       get 'user'
       get 'checkins'
+      get 'friends'
       get 'venues_search'
       get 'venue_details'
     end
