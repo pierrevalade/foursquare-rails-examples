@@ -1,7 +1,7 @@
 # Foursquare Rails Examples
 
 This is a working Rails application that connects to the Foursquare API using [Quimby](http://github.com/groupme/quimby).
-The application is live on Heroku at [http://foursquare-rails-examples.heroku.com](http://foursquare-rails-example.heroku.com)
+The application is live on Heroku at [http://foursquare-rails-examples.heroku.com](http://foursquare-rails-examples.heroku.com)
 
 ## Configuration
 
